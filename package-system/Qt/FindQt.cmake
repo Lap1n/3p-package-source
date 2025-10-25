@@ -37,6 +37,10 @@ set(QT5_COMPONENTS
     Test
     Widgets
     Xml
+    WebChannel
+    WebEngine
+    WebEngineWidgets
+    WebSockets
 )
 
 include(${CMAKE_CURRENT_LIST_DIR}/Platform/${PAL_PLATFORM_NAME}/Qt_${PAL_PLATFORM_NAME_LOWERCASE}.cmake)

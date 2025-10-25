@@ -49,27 +49,55 @@ ENV LANG=en_US.UTF-8
 ENV ENABLE_QT_WAYLAND=0
 
 # Install the development packages needed to build Qt from source
-RUN apt-get install -y qtbase5-dev \ 
+RUN apt-get install -y qtbase5-dev \
                        build-essential \
                        perl \
                        python3 \
                        git \
                        '^libxcb.*-dev' \
                        libx11-xcb-dev \
-                       libglu1-mesa-dev \ 
+                       libglu1-mesa-dev \
                        libxrender-dev \
                        libxi-dev \
                        libxkbcommon-dev \
                        libxkbcommon-x11-dev \
                        libgbm-dev \
                        libxext-dev \
-                       libfontconfig1-dev \ 
+                       libfontconfig1-dev \
                        libtiff-dev \
                        libwayland-dev \
                        libwayland-egl1-mesa \
                        libwayland-server0 \
                        libgles2-mesa-dev \
-                       libdrm-dev
+                       libdrm-dev \
+                       pkg-config \
+                       libdbus-1-dev \
+                       ninja-build \
+                       nodejs \
+                       npm \
+                       python-is-python3 \
+                       python3-distutils \
+                       python3-setuptools \
+                       python3-pip \
+                       bison \
+                       flex \
+                       gperf \
+                       libnss3 \
+                       libnss3-dev \
+                       libnspr4 \
+                       libnspr4-dev \
+                       libasound2 \
+                       libasound2-dev \
+                       libxcomposite-dev \
+                       libxcursor-dev \
+                       libxdamage-dev \
+                       libxrandr-dev \
+                       libxtst-dev \
+                       libpci-dev \
+                       libcap-dev \
+                       libexpat1-dev \
+                       libudev-dev \
+                       libicu-dev
 
 # Prepare a target folder within the container to install the build artifacts tp
 RUN mkdir -p /data/workspace/qt
